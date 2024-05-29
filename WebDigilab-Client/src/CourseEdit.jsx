@@ -23,9 +23,8 @@ function CourseEdit(props) {
 
     const handleChapterChange = (event) => {
         const chapterId = event.target.value;
-        const chapter = chapters.find(ch => ch.chapter_id === chapterId);
+        const chapter = chapters.find(ch => ch.chapter_id == chapterId);
         setSelectedChapter(chapter);
-       
     };
 
     const handleEditCourse = (event) => {
@@ -271,7 +270,7 @@ function CourseEdit(props) {
                     ))}
                 </select>
                 {selectedChapter && (
-                    <div key={selectedChapter.id}>
+                    <div >
                         <div className="relative z-0 w-full mb-5 group">
                             <input
                                 type="text"

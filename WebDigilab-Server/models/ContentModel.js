@@ -34,4 +34,5 @@ const Chapter = mongoose.model('Chapter', chapterSchema);
 module.exports = {
     Matkul,
     Course,
+    Chapter
 }

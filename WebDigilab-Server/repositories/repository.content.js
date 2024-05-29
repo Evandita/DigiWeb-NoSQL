@@ -149,7 +149,7 @@ async function deleteChapter(req, res) {
     const {chapter_id} = req.body;
 
     try {
-        const result = await Chapter.findOneAndDelete({ chapte_id: chapter_id });
+        const result = await Chapter.findOneAndDelete({ chapter_id: chapter_id });
         res.status(200).json(result);
     } catch (err) {
         res.status(500).json({

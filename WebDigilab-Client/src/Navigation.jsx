@@ -63,9 +63,9 @@ function Navigation() {
                 
                 <img className="w-8 h-8 rounded-full" src={
                     cookies.user.isAslab ? 
-                    (cookies.user.data.aslab_profile_picture != null && cookies.user.data.aslab_profile_picture != 'null' && cookies.user.data.aslab_profile_picture != '' )? cookies.user.data.aslab_profile_picture : '/profile_picture.png' :
-                    (cookies.user.data.praktikan_profile_picture != null && cookies.user.data.aslab_profile_picture != 'null' && cookies.user.data.aslab_profile_picture != '') ? cookies.user.data.praktikan_profile_picture : '/profile_picture.png'
-                } alt="user photo" />
+                    (cookies.user.data.aslab_profile_picture != null && cookies.user.data.aslab_profile_picture != 'null' && cookies.user.data.aslab_profile_picture != '' && cookies.user.data.aslab_profile_picture != 'undefined' )? cookies.user.data.aslab_profile_picture : '/profile_picture.png' :
+                    (cookies.user.data.praktikan_profile_picture != null && cookies.user.data.praktikan_profile_picture != 'null' && cookies.user.data.praktikan_profile_picture != '' && cookies.user.data.praktikan_profile_picture != 'undefined') ? cookies.user.data.praktikan_profile_picture : '/profile_picture.png'
+                } alt="user photo"  />
             </button>
             <div className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600 absolute left-0 top-full mt-2 w-48" id="user-dropdown">
                 <div className="px-4 py-3">
@@ -74,8 +74,8 @@ function Navigation() {
                     </span>
                     <span className="block text-sm text-gray-500 truncate dark:text-gray-400">
                     {cookies.user.isAslab ? 
-                        (cookies.user.data.aslab_bio != null && cookies.user.data.aslab_bio != 'null' && cookies.user.data.aslab_bio != '') ? cookies.user.data.aslab_bio : 'no bio' :
-                        (cookies.user.data.praktikan_bio != null && cookies.user.data.praktikan_bio != 'null' && cookies.user.data.praktikan_bio != '') ? cookies.user.data.praktikan_bio : 'no bio' }
+                        (cookies.user.data.aslab_bio != null && cookies.user.data.aslab_bio != 'null' && cookies.user.data.aslab_bio != '' && cookies.user.data.aslab_bio != 'undefined') ? cookies.user.data.aslab_bio : 'no bio' :
+                        (cookies.user.data.praktikan_bio != null && cookies.user.data.praktikan_bio != 'null' && cookies.user.data.praktikan_bio != '' && cookies.user.data.praktikan_bio != 'undefined') ? cookies.user.data.praktikan_bio : 'no bio' }
                     </span>
                 </div>
                 <ul className="py-2" aria-labelledby="user-menu-button">
@@ -105,12 +105,7 @@ function Navigation() {
                     <li>
                         <a href="/Courses" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Courses</a>
                     </li>
-                    <li>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">About</a>
-                    </li>
+                    
                     
                     {cookies.user.isAslab && (
                     <li>
@@ -130,14 +125,6 @@ function Navigation() {
 
                 <li>
                     <a href="/Courses" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Courses</a>
-                </li>
-                
-                <li>
-                    <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-                </li>
-
-                <li>
-                    <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
                 </li>
                 
                 {cookies.user.isAslab && (

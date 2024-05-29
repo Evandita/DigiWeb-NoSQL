@@ -208,7 +208,7 @@ async function updateAccountAslab (req, res) {
             aslab_email: aslab_email,
             aslab_password: hashedPassword,
           }, { new: true });
-          res.status(201).json(result.rows[0]);
+          res.status(201).json(result);
       }
       
   } catch (error) {
