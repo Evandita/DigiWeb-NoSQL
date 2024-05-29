@@ -1,11 +1,16 @@
 require('dotenv').config();
 const express = require("express");
 const cors = require('cors');
+const { v4:uuidv4 } = require('uuid')
 const accountRepo = require("./repositories/repository.account");
 const contentRepo = require("./repositories/repository.content")
+const db = require("./config/db");
 
 const port = process.env.PORT;
 const app = express();
+
+//Connect To the Database
+db.connectDB();
 
 // Middleware
 app.use(cors());
