@@ -8,7 +8,7 @@ NoSQL tidak menggunakan tabel dan skema, memungkinkan pengolahan data lebih flek
 Web Digilab akan menggunakan NoSQL untuk fleksibilitas struktur data dan Docker untuk penyebaran yang konsisten. Kombinasi NoSQL dan Docker memungkinkan pembangunan aplikasi web yang skalabel, fleksibel, dan mudah dikelola.
 
 ### Previous GitHub Repo
-Isi apa bang ???
+Isi apa bang ??
 
 ## Front End
 Front end Digilab adalah aplikasi web yang dibangun menggunakan ReactJS sebagai framework. Aplikasi ini menyediakan antarmuka pengguna yang intuitif dan responsif untuk mengakses fitur-fitur yang tersedia di platform DigiLab.
